@@ -2,6 +2,10 @@
 
 A simple extension for adding a `{% markdown %}{% endmarkdown %}` tag to Jinja.
 
+## Installation
+
+`pip install jinja2_markdown`
+
 ## Usage
 
 ```python
