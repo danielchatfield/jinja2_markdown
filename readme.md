@@ -9,7 +9,7 @@ A simple extension for adding a `{% markdown %}{% endmarkdown %}` tag to Jinja.
 ## Usage
 
 ```python
-from jinja2.ext.markdown import MarkdownExtension
+from jinja2_markdown import MarkdownExtension
 
 
 jinja_env.add_extension(MarkdownExtension)
@@ -20,7 +20,7 @@ or
 
 ```python
 
-jinja_env = Environment(extensions=['jinja2.ext.markdown'])
+jinja_env = Environment(extensions=['jinja2_markdown.MarkdownExtension'])
 ```
 
 ## Features
