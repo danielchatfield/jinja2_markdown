@@ -1,0 +1,11 @@
+language: python
+python:
+ - "2.7"
+ - "3.3"
+install:
+ - pip install flake8
+ - python setup.py install
+script:
+ - flake8 jinja2_markdown.py
+ - flake8 tests.py
+ - python tests.py
