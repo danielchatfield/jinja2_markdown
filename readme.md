@@ -1,4 +1,4 @@
-# Jinja2 Markdown extension
+# Jinja2 Markdown extension [![Build Status](https://travis-ci.org/danielchatfield/jinja2_markdown.png)](https://travis-ci.org/danielchatfield/jinja2_markdown)
 
 A simple extension for adding a `{% markdown %}{% endmarkdown %}` tag to Jinja.
 
