@@ -1,6 +1,6 @@
 import os
 import unittest
-from jinja2 import Environment, Template, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader
 from jinja2_markdown import MarkdownExtension
 
 
@@ -11,11 +11,6 @@ class Jinja2MarkdownTestCase(unittest.TestCase):
         self.env = Environment(loader=loader, extensions=[MarkdownExtension])
 
     def test_parsing(self):
-        input = ("{% markdown %}"
-                 "Regular text"
-                 "# Heading"
-                 "{% endmarkdown %}")
-
         output = ("<p>Regular text</p>\n"
                   "<h1>Heading</h1>")
 
