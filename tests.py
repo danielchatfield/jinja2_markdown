@@ -7,7 +7,8 @@ from jinja2_markdown import MarkdownExtension
 class Jinja2MarkdownTestCase(unittest.TestCase):
 
     def setUp(self):
-        self.env = Environment(loader=FileSystemLoader(os.path.dirname(__file__)),extensions=['jinja2_markdown.MarkdownExtension'])
+        loader = FileSystemLoader(os.path.dirname(__file__))
+        self.env = Environment(loader=loader, extensions=[MarkdownExtension])
 
     def test_parsing(self):
         input = ("{% markdown %}"
