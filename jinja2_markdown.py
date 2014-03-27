@@ -59,4 +59,4 @@ class MarkdownExtension(Extension):
 
     def _render_markdown(self, block):
         block = self.environment.markdowner.convert(block)
-        return '<!-- MARKDOWN -->\n' + block + '\n<!-- ENDMARKDOWN -->'
+        return block
