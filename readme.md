@@ -25,7 +25,7 @@ jinja_env = Environment(extensions=['jinja2_markdown.MarkdownExtension'])
 
 ## Features
 
-### Automatic indentation detection
+### Automatic whitespace gobble
 
 This works:
 
