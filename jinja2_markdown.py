@@ -6,6 +6,7 @@
     A jinja2 extension that adds a `{% markdown %}` tag.
 
     :copyright: (c) 2014 by Daniel Chatfield
+    :copyright: (c) 2014 by Veniamin Gvozdikov
 """
 
 import markdown
@@ -18,8 +19,14 @@ class MarkdownExtension(Extension):
 
     def __init__(self, environment):
         super(MarkdownExtension, self).__init__(environment)
+
+        extensions = environment.app.config['MARKDOWN_EXTENSIONS']
+        extconfigs = environment.app.config['MARKDOWN_EXTCONFIGS']
+
         environment.extend(
-            markdowner=markdown.Markdown(extensions=['extra'])
+            markdowner=markdown.Markdown(extensions=extensions,
+            extension_configs=extconfigs
+            )
         )
 
     def parse(self, parser):
