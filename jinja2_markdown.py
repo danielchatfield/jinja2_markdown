@@ -16,10 +16,10 @@ from jinja2.ext import Extension
 class MarkdownExtension(Extension):
     tags = set(['markdown'])
 
-    def __init__(self, environment):
+    def __init__(self, environment, extensions=['extra']):
         super(MarkdownExtension, self).__init__(environment)
         environment.extend(
-            markdowner=markdown.Markdown(extensions=['extra'])
+            markdowner=markdown.Markdown(extensions=extensions)
         )
 
     def parse(self, parser):
