@@ -19,7 +19,7 @@ class MarkdownExtension(Extension):
     def __init__(self, environment):
         super(MarkdownExtension, self).__init__(environment)
         environment.extend(
-            markdowner=markdown.Markdown(extensions=['extra'])
+            markdowner=markdown.Markdown(extensions=['extra', 'smarty'])
         )
 
     def parse(self, parser):
